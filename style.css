@@ -1,0 +1,84 @@
+/* Основной сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFFC00; /* Фон Snapchat */
+    color: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Контейнер приложения */
+  .snap-container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Логотип */
+  .snap-logo {
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 80px;
+    height: auto;
+  }
+  
+  /* Форма */
+  .snap-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .snap-input {
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 30px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .snap-button {
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .snap-button:hover {
+    background-color: #333;
+  }
+  
+  /* Подвал */
+  .snap-footer {
+    margin-top: 20px;
+  }
+  
+  .snap-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .snap-link:hover {
+    text-decoration: underline;
+  }
+  
